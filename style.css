@@ -525,6 +525,7 @@ body{
     margin: 0px 35px;
     padding-bottom: 20px;
     width: 100%;
+    padding-inline: 1rem;
 }
 
 .list-section .item2{
@@ -536,7 +537,7 @@ body{
 }
 
 .list-section .item2 .file-name span {
-    position: absolute;
+        position: absolute;
         right: 0;
         bottom: -24px;
 }
