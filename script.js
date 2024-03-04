@@ -67,7 +67,7 @@ function uploadFile(file){
         <div class="col">
             <img src="icons/${iconSelector(file.type)}" alt="">
         </div>
-        <div class="col">
+        <div class="col item2">
             <div class="file-name">
                 <div class="name">${file.name}</div>
                 <span>0%</span>
