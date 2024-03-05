@@ -69,9 +69,7 @@ body{
     display: none;
 }
 
-.sidebar.close{
-    width: 60px;
-}
+
 
 .sidebar .logo{
     font-size: 24px;
@@ -160,10 +158,22 @@ body{
     color: var(--success);
 }
 
+/* on sidebar is closed */
+.sidebar.close {
+    width: 60px;
+}
+
 .sidebar.close .side-menu li a{
     width: calc(48px - (4px * 2));
     transition: all 0.3s ease;
 }
+
+.sidebar.close~.content {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+
 
 .sidebar .side-menu li a .bx{
     min-width: calc(60px - ((4px + 6px) * 2));
@@ -185,11 +195,6 @@ body{
     width: calc(100% - 230px);
     left: 230px;
     transition: all 0.3s ease;
-}
-
-.sidebar.close~.content{
-    width: calc(100% - 60px);
-    left: 60px;
 }
 
 .content nav{
@@ -666,6 +671,7 @@ position: absolute;
 @media screen and (max-width: 768px) {
     .sidebar{
         width: 200px;
+
     }
 
     .content{
