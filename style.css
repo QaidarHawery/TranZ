@@ -69,9 +69,7 @@ body{
     display: none;
 }
 
-.sidebar.close{
-    width: 60px;
-}
+
 
 .sidebar .logo{
     font-size: 24px;
@@ -160,10 +158,22 @@ body{
     color: var(--success);
 }
 
+/* on sidebar is closed */
+.sidebar.close {
+    width: 60px;
+}
+
 .sidebar.close .side-menu li a{
     width: calc(48px - (4px * 2));
     transition: all 0.3s ease;
 }
+
+.sidebar.close~.content {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+
 
 .sidebar .side-menu li a .bx{
     min-width: calc(60px - ((4px + 6px) * 2));
@@ -185,11 +195,6 @@ body{
     width: calc(100% - 230px);
     left: 230px;
     transition: all 0.3s ease;
-}
-
-.sidebar.close~.content{
-    width: calc(100% - 60px);
-    left: 60px;
 }
 
 .content nav{
@@ -566,11 +571,7 @@ position: absolute;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-/*
-.list-section li:hover{
-    box-shadow: #E3EAF9 0px 0px 4px 0px, #E3EAF9 0px 12px 16px 0px;
-}
-*/
+
 .list-section li .col{
     flex: .1;
 }
@@ -649,7 +650,6 @@ position: absolute;
     width: 100%;
     max-width: 100%;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     margin-top: 0px;
     }
@@ -666,6 +666,7 @@ position: absolute;
 @media screen and (max-width: 768px) {
     .sidebar{
         width: 200px;
+
     }
 
     .content{
@@ -688,7 +689,7 @@ position: absolute;
         width: 100%;
         max-width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
         margin-top: 0px;
