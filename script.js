@@ -59,8 +59,8 @@ function typeValidation(type){
       type == "application/pdf" ||
       splitType == "image" ||
       splitType == "video" ||
-      splitType == "text" ||
-      type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' || 
+      splitType == "text"  ||
+      type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'   || 
       type === 'application/vnd.openxmlformats-officedocument.presentationml.presentation' ||
       type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     ) 
