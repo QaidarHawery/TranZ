@@ -53,11 +53,13 @@ dropArea.ondrop = (e) => {
 // check the file type
 function typeValidation(type){
     var splitType = type.split('/')[0]
+    console.log(splitType);
     if (
       type == "application/pdf" ||
       splitType == "image" ||
       splitType == "video" ||
-      splitType == "text"
+      splitType == "text"  ||
+      splitType == "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     ) {
       return true;
     }
