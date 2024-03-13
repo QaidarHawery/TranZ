@@ -52,6 +52,7 @@ dropArea.ondrop = (e) => {
 
 // check the file type
 function typeValidation(type){
+    
     var splitType = type.split('/')[0]
     console.log(type);
     if (
@@ -59,7 +60,9 @@ function typeValidation(type){
       splitType == "image" ||
       splitType == "video" ||
       splitType == "text" ||
-      type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+      type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' || 
+      type === 'application/vnd.openxmlformats-officedocument.presentationml.presentation' ||
+      type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     ) 
     {
       return true;
