@@ -188,7 +188,6 @@ body{
 
 /* Test */
 main .cati .wrapper h1{
-    margin: 70px 0 0;
     color: var(--dark);
 }
 main .cati .wrapper h2{
@@ -216,7 +215,7 @@ main .cati .line{
 .line::after{
     content: '';
     height: 25px;
-    transform: .7s;
+    transform: .5s;
     display: block;
     width: 100%;
     animation: animate 1 4s;
@@ -245,6 +244,16 @@ main .cati .line{
 .audio::after{
     max-width: 40%;
     background: linear-gradient(45deg, #EA80FC,#9E0B0F);
+}
+
+@keyframes animate{
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 100%;
+    }
 }
 /* End of Test */
 
