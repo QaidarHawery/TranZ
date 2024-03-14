@@ -186,6 +186,67 @@ body{
     color: var(--danger);
 }
 
+/* Test */
+main .cati .wrapper h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 70px 0 0;
+    color: var(--dark);
+}
+main .cati .wrapper h2{
+    text-align: left;
+    color: var(--dark);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+main .cati .line{
+    height: 25px;
+    max-width: 200px;
+    margin:  0 auto 10px 0;
+    line-height: 25px;
+    font-size: 10px;
+    color: var(--dark);
+    background: var(--grey);
+    padding:  0 0 0 10px;
+    position: relative;
+    border-radius: 50px;
+    z-index: -2;
+    font-weight: 700;
+}
+
+.line::after{
+    content: '';
+    background: linear-gradient(45deg, #ee0979,#ff6a00);
+    height: 25px;
+    transform: .7s;
+    display: block;
+    width: 100%;
+    animation: animate 1 4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.video::after{
+    max-width: 90%;
+}
+
+.image::after{
+    max-width: 70%;
+}
+
+.docs::after{
+    max-width: 45%;
+}
+
+.audio::after{
+    max-width: 25%;
+}
+/* End of Test */
+
 /* END of SIDEBAR */
 
 /* CONTENT */
