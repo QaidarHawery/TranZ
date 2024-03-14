@@ -579,7 +579,7 @@ main .cati .line{
     color: #707EA0;
     margin-bottom: 10px;
 }
-.drop-section button{
+.drop-section button , .list-section button{
     color: white;
     background-color: #5874C6;
     border: none;
