@@ -188,22 +188,20 @@ body{
 
 /* Test */
 main .cati .wrapper h1{
-    text-align: center;
-    text-transform: uppercase;
     margin: 70px 0 0;
     color: var(--dark);
 }
 main .cati .wrapper h2{
     text-align: left;
     color: var(--dark);
-    font-weight: 400;
-    font-size: 15px;
+    font-weight: 300;
+    font-size: 18px;
 }
 
 main .cati .line{
     height: 25px;
     max-width: 200px;
-    margin:  0 auto 10px 0;
+    margin:  0 auto 5px 0;
     line-height: 25px;
     font-size: 10px;
     color: var(--dark);
@@ -217,7 +215,6 @@ main .cati .line{
 
 .line::after{
     content: '';
-    background: linear-gradient(45deg, #ee0979,#ff6a00);
     height: 25px;
     transform: .7s;
     display: block;
@@ -231,19 +228,23 @@ main .cati .line{
 }
 
 .video::after{
-    max-width: 90%;
+    max-width: 100%;
+    background: linear-gradient(45deg, #00E5FF,#1200FF);
 }
 
 .image::after{
-    max-width: 70%;
+    max-width: 80%;
+    background: linear-gradient(45deg, #00BBF0,#005792);
 }
 
 .docs::after{
-    max-width: 45%;
+    max-width: 60%;
+    background: linear-gradient(45deg, #FFE53B,#FF2525);
 }
 
 .audio::after{
-    max-width: 25%;
+    max-width: 40%;
+    background: linear-gradient(45deg, #EA80FC,#9E0B0F);
 }
 /* End of Test */
 
