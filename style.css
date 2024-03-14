@@ -186,77 +186,6 @@ body{
     color: var(--danger);
 }
 
-/* Test */
-main .cati .wrapper h1{
-    color: var(--dark);
-}
-main .cati .wrapper h2{
-    text-align: left;
-    color: var(--dark);
-    font-weight: 300;
-    font-size: 18px;
-}
-
-main .cati .line{
-    height: 25px;
-    max-width: 200px;
-    margin:  0 auto 5px 0;
-    line-height: 25px;
-    font-size: 10px;
-    color: var(--dark);
-    background: var(--grey);
-    padding:  0 0 0 10px;
-    position: relative;
-    border-radius: 50px;
-    z-index: -2;
-    font-weight: 700;
-}
-
-.line::after{
-    content: '';
-    height: 25px;
-    transform: .5s;
-    display: block;
-    width: 100%;
-    animation: animate 1 4s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 50px;
-}
-
-.video::after{
-    max-width: 100%;
-    background: linear-gradient(45deg, #00E5FF,#1200FF);
-}
-
-.image::after{
-    max-width: 80%;
-    background: linear-gradient(45deg, #00BBF0,#005792);
-}
-
-.docs::after{
-    max-width: 60%;
-    background: linear-gradient(45deg, #FFF2C6,#f9ed32);
-}
-
-.audio::after{
-    max-width: 40%;
-    background: linear-gradient(45deg, #FECDD3,#9E0B0F);
-}
-
-@keyframes animate{
-    0%{
-        width: 0;
-    }
-
-    100%{
-        width: 100%;
-    }
-}
-/* End of Test */
-
 /* END of SIDEBAR */
 
 /* CONTENT */
@@ -387,6 +316,76 @@ main .cati .line{
     margin-bottom: 10px;
     color: var(--dark);
 }
+
+/* Test */
+main .cati .wrapper h1{
+    color: var(--dark);
+}
+main .cati .wrapper h2{
+    text-align: left;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+main .cati .line{
+    height: 25px;
+    max-width: 15rem;
+    line-height: 25px;
+    font-size: 10px;
+    color: var(--dark);
+    background: var(--grey);
+    padding:  0 0 0 10px;
+    position: relative;
+    border-radius: 50px;
+    z-index: -2;
+    font-weight: 700;
+}
+
+.line::after{
+    content: '';
+    height: 25px;
+    transform: .5s;
+    display: block;
+    width: 100%;
+    animation: animate 1 4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.video::after{
+    max-width: 100%;
+    background: linear-gradient(45deg, #00E5FF,#1200FF);
+}
+
+.image::after{
+    max-width: 80%;
+    background: linear-gradient(45deg, #00BBF0,#005792);
+}
+
+.docs::after{
+    max-width: 60%;
+    background: linear-gradient(45deg, #FFF2C6,#f9ed32);
+}
+
+.audio::after{
+    max-width: 40%;
+    background: linear-gradient(45deg, #FECDD3,#9E0B0F);
+}
+
+@keyframes animate{
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+/* End of Test */
 
 .content main .insights{
     display: grid;
