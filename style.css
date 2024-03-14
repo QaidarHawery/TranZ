@@ -238,12 +238,12 @@ main .cati .line{
 
 .docs::after{
     max-width: 60%;
-    background: linear-gradient(45deg, #FFE53B,#FF2525);
+    background: linear-gradient(45deg, #FFF2C6,#f9ed32);
 }
 
 .audio::after{
     max-width: 40%;
-    background: linear-gradient(45deg, #EA80FC,#9E0B0F);
+    background: linear-gradient(45deg, #FECDD3,#9E0B0F);
 }
 
 @keyframes animate{
