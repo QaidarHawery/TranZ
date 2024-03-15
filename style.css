@@ -328,16 +328,9 @@ body{
 }
 
 .drop-menu-wrap.open-menu{
-<<<<<<< HEAD
-    max-height: 200px;
-}
-
-
-=======
     max-height: 198px;
 }
 
->>>>>>> 9367a3c6ddb6ab1760b42fa61e820eb477c67529
 .drop-menu-wrap.open-setting{
     max-height: 600px;
 }
