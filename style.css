@@ -305,6 +305,16 @@ body{
 }
 
 /* Drop Menu */
+.drop-menu-link-settings span{
+    transform: rotateZ(90deg);
+    transition: all 0.4s ease;
+
+}
+
+.drop-menu-link-settings .rotate-arrow{
+    transform: rotateZ(270deg);
+}
+
 .drop-menu-wrap{
     position: absolute;
     top: 100%;
@@ -386,9 +396,9 @@ body{
     transition: transform 0.5s;
 }
 
-.content nav .drop-menu-link:hover span{
+/* .content nav .drop-menu-link:hover span{
     transform: translateX(5px);
-}
+} */
 
 .drop-menu-link:hover p{
     font-weight: 600;

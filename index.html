@@ -220,9 +220,11 @@
       let settingMenu = document.getElementById("settingMenu");
       let settingLink = document.querySelector('.drop-menu-link-settings');
       let subMenu2 = document.getElementById("subMenu");
+      let arrow = document.querySelector('.drop-menu-link-settings span');
 
       settingLink.addEventListener("click", function(){
         subMenu2.classList.toggle("open-setting"); 
+        arrow.classList.toggle("rotate-arrow");
       });
  
   </script>
