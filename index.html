@@ -53,7 +53,7 @@
         <label for="theme-toggle" class="theme-toggle"></label>
 
         <a href="#" class="profile">
-          <img src="images/lexica.jpeg" onclick="toggleMenu()">
+          <img src="images/lexica.jpeg" >
           <!--Drop-Down-Menu-->
           <div class="drop-menu-wrap" id="subMenu">
               <div class="drop-menu">
@@ -68,7 +68,7 @@
                       <i class='bx bx-log-out'></i>
                       <p>Logout</p>
                   </a>
-                  <a href="#" class="drop-menu-link drop-menu-link-settings" onclick="settingShow()">
+                  <a href="#" class="drop-menu-link drop-menu-link-settings" >
                       <i class='bx bxs-cog'></i>
                       <p>Setting</p>
                       <span>></span>
@@ -209,21 +209,21 @@
     <script src="script.js"></script>
 
     <script>
+
       let subMenu = document.getElementById("subMenu");
-
-      function toggleMenu(){
-          subMenu.classList.toggle("open-menu");
-      }
-    </script>
-
-  <script>
+      let profileBTN = document.querySelector('.profile');
       let settingMenu = document.getElementById("settingMenu");
-      let settingLink = document.querySelector('.drop-menu-link-settings');
-      let subMenu2 = document.getElementById("subMenu");
+      let settingLink = document.querySelector('.drop-menu-link-settings'); 
       let arrow = document.querySelector('.drop-menu-link-settings span');
 
+      profileBTN.addEventListener("click",function() {
+          subMenu.classList.toggle("open-menu"); 
+          subMenu.classList.remove("open-setting")
+      });
+ 
+
       settingLink.addEventListener("click", function(){
-        subMenu2.classList.toggle("open-setting"); 
+        subMenu.classList.toggle("open-setting"); 
         arrow.classList.toggle("rotate-arrow");
       });
  
