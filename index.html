@@ -68,7 +68,7 @@
                       <i class='bx bx-log-out'></i>
                       <p>Logout</p>
                   </a>
-                  <a href="#" class="drop-menu-link" onclick="settingShow()">
+                  <a href="#" class="drop-menu-link drop-menu-link-settings" onclick="settingShow()">
                       <i class='bx bxs-cog'></i>
                       <p>Setting</p>
                       <span>></span>
@@ -207,20 +207,24 @@
 
     <script src="index.js"></script>
     <script src="script.js"></script>
+
     <script>
       let subMenu = document.getElementById("subMenu");
 
       function toggleMenu(){
           subMenu.classList.toggle("open-menu");
       }
-  </script>
+    </script>
 
   <script>
       let settingMenu = document.getElementById("settingMenu");
+      let settingLink = document.querySelector('.drop-menu-link-settings');
+      let subMenu2 = document.getElementById("subMenu");
 
-      function settingShow(){
-          settingMenu.classList.toggle("open-setting")
-      }
+      settingLink.addEventListener("click", function(){
+        subMenu2.classList.toggle("open-setting"); 
+      });
+ 
   </script>
   </body>
 </html>
