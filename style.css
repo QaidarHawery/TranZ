@@ -309,6 +309,8 @@ body{
     position: absolute;
     top: 100%;
     right: 2%;
+    margin-top: 1rem;
+    border-radius: 10px; 
     width: 280px;
     max-height: 0px;
     overflow: hidden;
@@ -325,8 +327,7 @@ body{
 
 .drop-menu{
     background: var(--light);
-    padding: 20px;
-    margin: 10px;
+    padding: 20px; 
     border-radius: 10px;
 }
 
