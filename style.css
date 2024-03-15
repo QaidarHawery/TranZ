@@ -318,7 +318,7 @@ body{
 .drop-menu-wrap{
     position: absolute;
     top: 100%;
-    right: 2%;
+    right: 5%;
     margin-top: 1rem;
     border-radius: 10px; 
     width: 280px;
