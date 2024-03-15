@@ -768,7 +768,7 @@ main .cati .line{
 .list-section{
     display: none;
     text-align: left;
-    margin: 0px 35px;
+    margin: 0px;
     padding-bottom: 20px;
     width: 100%;
     padding-inline: 1rem;
