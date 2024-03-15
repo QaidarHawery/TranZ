@@ -318,11 +318,9 @@ body{
 }
 
 .drop-menu-wrap.open-menu{
-    max-height: 200px;
+    max-height: 198px;
 }
-*{
-    outline :1px solid red;
-}
+
 .drop-menu-wrap.open-setting{
     max-height: 600px;
 }
