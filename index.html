@@ -53,8 +53,55 @@
         <label for="theme-toggle" class="theme-toggle"></label>
 
         <a href="#" class="profile">
-          <img src="images/profile.jpg" />
-        </a>
+          <img src="images/lexica.jpeg" onclick="toggleMenu()">
+          <!--Drop-Down-Menu-->
+          <div class="drop-menu-wrap" id="subMenu">
+              <div class="drop-menu">
+                  <div class="user-info">
+                      <img src="images/lexica.jpeg">
+                      <h3>Qaidar Hawery <br>
+                          <span>username@example.com</span>
+                      </h3>
+                  </div>
+                  <hr>
+                  <a href="#" class="drop-menu-link">
+                      <i class='bx bx-log-out'></i>
+                      <p>Logout</p>
+                  </a>
+                  <a href="#" class="drop-menu-link" onclick="settingShow()">
+                      <i class='bx bxs-cog'></i>
+                      <p>Setting</p>
+                      <span>></span>
+                  </a>
+
+              <!--Radio Buttons-->
+              <div class="radio-list" id="settingMenu">
+                  <a href="#">
+                      <p>Delete Files After:</p>
+                  </a>
+                  <div class="radio-item">
+                      <input type="radio" name="radio" id="radio1" checked>
+                    
+                      <label for="radio1">One Week</label>
+                  </div>
+                  <div class="radio-item">
+                      <input type="radio" name="radio" id="radio2">
+                      <label for="radio2">One Month</label>
+                  </div>
+                  <div class="radio-item">
+                      <input type="radio" name="radio" id="radio3">
+                      <label for="radio3">Three Month</label>
+                  </div>
+              <div class="btns">
+                  <button type="button">Save</button>
+                  <button type="button" class="Cancle">Cancle</button>
+              </div>
+              </div>
+              <!--End-of-Radio-Buttons-->
+              </div>
+          </div>
+          <!--End-of-Drop-Down-Menu-->
+      </a>
       </nav>
 
       <!-- End of Navbar -->
@@ -160,5 +207,20 @@
 
     <script src="index.js"></script>
     <script src="script.js"></script>
+    <script>
+      let subMenu = document.getElementById("subMenu");
+
+      function toggleMenu(){
+          subMenu.classList.toggle("open-menu");
+      }
+  </script>
+
+  <script>
+      let settingMenu = document.getElementById("settingMenu");
+
+      function settingShow(){
+          settingMenu.classList.toggle("open-setting-menu")
+      }
+  </script>
   </body>
 </html>

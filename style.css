@@ -304,6 +304,169 @@ body{
     left: calc(100% - (25px - 4px) - 2px);
 }
 
+/* Drop Menu */
+.drop-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 2%;
+    width: 280px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.drop-menu-wrap.open-menu{
+    max-height: 600px;
+}
+
+.drop-menu-wrap.open-setting-menu{
+    max-height: 600px;
+}
+
+.drop-menu{
+    background: var(--light);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.user-info h3 span{
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.content nav .user-info img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.drop-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--dark);
+    margin: 10px 0 0px;
+    cursor: default;
+}
+
+.drop-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--dark);
+    margin: 5px 0;
+    font-weight: 400;
+}
+
+.drop-menu-link p{
+    width: 100%;
+    padding: 10px;
+}
+
+.content nav .drop-menu-link i{
+    font-size: 22px;
+    padding-top: 1px;
+}
+
+.content nav .drop-menu-link span{
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+.content nav .drop-menu-link:hover span{
+    transform: translateX(5px);
+}
+
+.drop-menu-link:hover p{
+    font-weight: 600;
+}
+
+/* Radio Buttons */
+
+.content nav .drop-menu-wrap .radio-item [type="radio"]{
+    display: none;
+}
+
+.content nav .drop-menu-wrap .radio-item + .radio-item{
+    margin-top: 5px;
+}
+.content nav .drop-menu-wrap .radio-item label{
+    display: block;
+    padding: 5px 60px;
+    background: var(--grey);
+    color: var(--dark);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 25px;
+    white-space: nowrap;
+    position: relative;
+}
+.content nav .drop-menu-wrap .radio-item label:after,
+.radio-item label:before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.content nav .drop-menu-wrap .radio-item label:after{
+    height: 15px;
+    width: 15px;
+    border:2px solid #524eee;
+    left: 20px;
+    top: calc(50% - 10px);
+}
+.content nav .drop-menu-wrap .radio-item label:before{
+    background: #524eee;
+    height: 10px;
+    width: 10px;
+    left: 11%;
+    top: 30%;
+    transform: scale(2.5);
+    transition: .4s ease-in-out 0s;
+    opacity: 0;
+    visibility: hidden;
+}
+.content nav .drop-menu-wrap .radio-item [type="radio"]:checked ~ label{
+    border-color: #524eee;
+}
+
+.content nav .drop-menu-wrap .radio-item [type="radio"]:checked ~ label:before{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.content nav .drop-menu .btns{
+    text-align: center;
+}
+
+.content nav .drop-menu .btns button{
+    color: white;
+    background-color: #5874C6;
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* End of Radio Buttons */
+/* End of Drop Menu */
+
 .content main{
     width: 100%;
     padding: 36px 24px;
