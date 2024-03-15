@@ -316,7 +316,7 @@ body{
 }
 
 .drop-menu-wrap.open-menu{
-    max-height: 600px;
+    max-height: 200px;
 }
 
 .drop-menu-wrap.open-setting-menu{
@@ -507,6 +507,7 @@ main .cati .line{
 
 .line::after{
     content: '';
+    background: linear-gradient(45deg, #ee0979,#ff6a00);
     height: 25px;
     transform: .5s;
     display: block;
@@ -521,22 +522,18 @@ main .cati .line{
 
 .video::after{
     max-width: 100%;
-    background: linear-gradient(45deg, #00E5FF,#1200FF);
 }
 
 .image::after{
     max-width: 80%;
-    background: linear-gradient(45deg, #00BBF0,#005792);
 }
 
 .docs::after{
     max-width: 60%;
-    background: linear-gradient(45deg, #FFF2C6,#f9ed32);
 }
 
 .audio::after{
     max-width: 40%;
-    background: linear-gradient(45deg, #FECDD3,#9E0B0F);
 }
 
 @keyframes animate{
