@@ -108,11 +108,14 @@ elseif(isset($_GET['video']))
       echo "</div>";
       echo "<div>";
         echo "<p>"
-      . shortenFileName($user['files_name']). "</p>";
-        echo "<P>". number_format((float)($user['files_size']/(1024 * 1024)),2,'.','.')."</P>";
+       .shortenFileName($user['files_name']). "</p>";
+        echo "<P>Size: ". number_format((float)($user['files_size']/(1024 * 1024)),2,'.','.')."</P>";
       echo "</div>";
-      echo "<div>";
-        echo "<input type='checkbox' class='select-item'/> ";
+      echo "<div>"; 
+        echo "<label class='select-item'/> 
+                <input type='checkbox'>
+                <span class='checkmark'></span>
+              </label>"; 
       echo "</div>";
 
     echo "</div>";

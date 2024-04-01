@@ -661,19 +661,123 @@ main .cati .line{
     "item-9 item-10 item-11 item-12"
     ;
 }
-
 .content-recent-opened>div:nth-child(1) {
     grid-area: item-1;
 }
-.content-recent-opened>div:nth-child(1) {
+
+.content-recent-opened>div:nth-child(2) {
     grid-area: item-2;
 }
+.content-recent-opened>div:nth-child(3) {
+    grid-area: item-3;
+}
+.content-recent-opened>div:nth-child(4) {
+    grid-area: item-4;
+}
+
+
 
 .content-recent-opened >div {
         border: 14px solid #eee;
+        position: relative;
             border-radius: 26px;
             padding: 0.8rem;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+}
 
+.content-recent-opened > div > div { 
+    flex-grow: 1; 
+}
+.content-recent-opened>div>div:first-child {
+    flex-grow: 0;
+    margin-right: 0.5rem;
+}
+.content-recent-opened>div>div:last-child {
+    position: absolute;
+    top: 0.4rem; 
+    right: 2.1rem;
+}
+.content-recent-opened>div>div:first-child .bx {
+    font-size: 4.5rem;
+}
+.content-recent-opened {
+    
+}
+ 
+/* For checkbox */
+.select-item {
+    display: block;
+    position: relative; 
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+ 
+.select-item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+ 
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #eee;
+    outline: 1px solid #ccc;;
+}
+ 
+.select-item:hover input~.checkmark {
+    background-color: #ccc;
+}
+ 
+.select-item input:checked~.checkmark {
+    background-color: #2196F3;
+}
+ 
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+ 
+.select-item input:checked~.checkmark:after {
+    display: block;
+}
+ 
+.select-item .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* End of checkobx */
+
+
+
+*{
+     
+}
+
+.content-recent-opened > div  { 
 }
 /*End of Section recent opened */
 
