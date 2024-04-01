@@ -661,24 +661,10 @@ main .cati .line{
     "item-9 item-10 item-11 item-12"
     ;
 }
-.content-recent-opened>div:nth-child(1) {
-    grid-area: item-1;
-}
-
-.content-recent-opened>div:nth-child(2) {
-    grid-area: item-2;
-}
-.content-recent-opened>div:nth-child(3) {
-    grid-area: item-3;
-}
-.content-recent-opened>div:nth-child(4) {
-    grid-area: item-4;
-}
-
 
 
 .content-recent-opened >div {
-        border: 14px solid #eee;
+        border: 10px solid #eee;
         position: relative;
             border-radius: 26px;
             padding: 0.8rem;

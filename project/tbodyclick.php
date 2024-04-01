@@ -97,10 +97,11 @@ elseif(isset($_GET['video']))
     $anjam=mysqli_query($conn,$sql7);
    if(mysqli_num_rows($anjam) > 0)
    {
+    $i= 1;
    while($user=mysqli_fetch_assoc($anjam))
    {  
 
-    echo "<div class='item'>";
+    echo "<div  class='item' style='grid-area:item-$i'>";
       echo "<div>";
         echo "<a class='navbar-brand'  target='_self' href='uploaded\\$user[files_name]'>";
         echo  "<i class='bx bx-video'></i>";
@@ -119,6 +120,7 @@ elseif(isset($_GET['video']))
       echo "</div>";
 
     echo "</div>";
+    $i +=1;
  
    }
    }
