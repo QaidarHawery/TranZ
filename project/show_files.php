@@ -48,7 +48,7 @@ function showFile($user)
 }
 
 //prepare the connection to the database
-function connectToDatabase($getType, $conn, $id)
+function prepareTheConnection($getType, $conn, $id)
 {
   switch ($getType) {
     case 'image':
@@ -78,27 +78,27 @@ function connectToDatabase($getType, $conn, $id)
 
 // display image file
 if (isset($_GET['image'])) {
-  connectToDatabase('image', $conn, $id);
+  prepareTheConnection('image', $conn, $id);
 }
 
 // display docs file-->
 elseif (isset($_GET['docs'])) {
-  connectToDatabase('docs', $conn, $id);
+  prepareTheConnection('docs', $conn, $id);
 }
 
 // display videos file--> 
 elseif (isset($_GET['video'])) {
-  connectToDatabase('video', $conn, $id);
+  prepareTheConnection('video', $conn, $id);
 }
 
 // display audio file-->
 elseif (isset($_GET['audio'])) {
-  connectToDatabase('audio', $conn, $id);
+  prepareTheConnection('audio', $conn, $id);
 }
 
 // display all files
 elseif (isset($_GET['all'])) {
-  connectToDatabase('all', $conn, $id);
+  prepareTheConnection('all', $conn, $id);
   //what is this?
   // if (!empty($_POST['editid']))
   //   foreach ($_POST['editid'] as $val) {
@@ -108,7 +108,7 @@ elseif (isset($_GET['all'])) {
   //   }
 
 } else {
-  connectToDatabase('all', $conn, $id);
+  prepareTheConnection('all', $conn, $id);
 }
 
 ?>
