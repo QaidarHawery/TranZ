@@ -228,10 +228,10 @@
                 <i class='bx bx-receipt'></i>
                 <h3>Recent Opened</h3>
               </div>
-              <div class="content-recent-opened"> 
-                <?php require_once('tbodyclick.php'); ?> 
+              <div class="content-recent-opened">
+                <?php require_once('show_files.php'); ?>
               </div>
- 
+
             </div>
 
 
