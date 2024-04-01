@@ -1,5 +1,19 @@
 <!-- display image file-->
 <?php
+
+function shortenFileName($filename, $maxLength = 10, $ellipsis = '...')
+{
+  $extension = pathinfo($filename, PATHINFO_EXTENSION);
+  $filenameWithoutExtension = pathinfo($filename, PATHINFO_FILENAME);
+
+  if (strlen($filenameWithoutExtension) > $maxLength) {
+    $filenameWithoutExtension = substr($filenameWithoutExtension, 0, $maxLength - strlen($ellipsis)) . $ellipsis;
+  }
+
+  return $filenameWithoutExtension . '.' . $extension;
+}
+
+
 if(isset($_GET['image']))
 {
     $sql7="select * from fileup1 where id_user=$id and files_type='image/jpeg' or  files_type='image/jpg' or  files_type='image/png' or  files_type='image/gif' " ;
@@ -14,10 +28,10 @@ if(isset($_GET['image']))
     <td>";
 
     echo "<a class='navbar-brand'  target='_self' href='uploaded\\$user[files_name]'>" ;
- echo  "<i class='bx bx-image'></i>";
- echo "</a>"; 
+    echo  "<i class='bx bx-image'></i>";
+    echo "</a>"; 
 
-      echo "<p>".$user['files_name']."</p>
+    echo "<p>".$user['files_name']."</p>
     </td>
     <td>". $user['files_type']."</td>
     <td> <P>". $user['files_size']."</P></td>
@@ -35,12 +49,9 @@ echo "
 >  </td>
 </tr>";
 
-
    }
    }
-
-  
-    
+ 
 }
 
 
@@ -55,16 +66,14 @@ elseif(isset($_GET['docs']))
    while($user=mysqli_fetch_assoc($anjam))
    {  
 
-    echo    "<tr>
-    
-    <td>";
-
+    echo "<tr>    
+      <td>";
     echo "<a class='navbar-brand'  target='_self' href='uploaded\\$user[files_name]'>" ;
- echo  "<i class='bx bx-file'></i>";
- echo "</a>"; 
+    echo "<i class='bx bx-file'></i>";
+    echo "</a>"; 
+    echo "<p>".$user['files_name']."</p>
 
-      echo "<p>".$user['files_name']."</p>
-    </td>
+      </td>
     <td>". $user['files_type']."</td>
     <td> <P>". $user['files_size']."</P></td>
     
@@ -91,23 +100,23 @@ elseif(isset($_GET['video']))
    while($user=mysqli_fetch_assoc($anjam))
    {  
 
-    echo    "<tr>
-    
-    <td>";
+    echo "<div class='item'>";
+      echo "<div>";
+        echo "<a class='navbar-brand'  target='_self' href='uploaded\\$user[files_name]'>";
+        echo  "<i class='bx bx-video'></i>";
+        echo "</a>";
+      echo "</div>";
+      echo "<div>";
+        echo "<p>"
+      . shortenFileName($user['files_name']). "</p>";
+        echo "<P>". number_format((float)($user['files_size']/(1024 * 1024)),2,'.','.')."</P>";
+      echo "</div>";
+      echo "<div>";
+        echo "<input type='checkbox' class='select-item'/> ";
+      echo "</div>";
 
-    echo "<a class='navbar-brand'  target='_self' href='uploaded\\$user[files_name]'>" ;
- echo  "<i class='bx bx-video'></i>";
- echo "</a>"; 
-
-      echo "<p>".$user['files_name']."</p>
-    </td>
-    <td>". $user['files_type']."</td>
-    <td> <P>". $user['files_size']."</P></td>
-    
-    <td> <a href='?id=$user[id_file]' class='btn btn-danger'>delete</a>  </td>
-</tr>";
-
-
+    echo "</div>";
+ 
    }
    }
 
@@ -223,7 +232,7 @@ else{
       echo    "<tr>
       
                                   <td>";
-                                  echo "<a class='navbar-brand'  target='_self' href='uploaded\\$user[files_name]'>" ;
+                                  echo "<a class='navbar-brand '  target='_self' href='uploaded\\$user[files_name]'>" ;
                                 
                                   if($user['files_type']=="image/jpeg" || $user['files_type']=="image/jpg" || $user['files_type']=="image/png" || $user['files_type']=="image/gif")
                                   {

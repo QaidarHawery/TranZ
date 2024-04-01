@@ -651,6 +651,32 @@ main .cati .line{
 
 /* END of CONTENT */
 
+
+/* Section recent opened */
+.content-recent-opened {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "item-1 item-2 item-3 item-4"
+    "item-5 item-6 item-7 item-8"
+    "item-9 item-10 item-11 item-12"
+    ;
+}
+
+.content-recent-opened>div:nth-child(1) {
+    grid-area: item-1;
+}
+.content-recent-opened>div:nth-child(1) {
+    grid-area: item-2;
+}
+
+.content-recent-opened >div {
+        border: 14px solid #eee;
+            border-radius: 26px;
+            padding: 0.8rem;
+
+}
+/*End of Section recent opened */
+
 /* Upload Buttun */
 
 

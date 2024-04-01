@@ -228,32 +228,10 @@
                 <i class='bx bx-receipt'></i>
                 <h3>Recent Opened</h3>
               </div>
-              <table>
-                <tbody>
-
-
-                  <?php
-                  /*
-if(!empty($_POST['editid']))
-{
- $idfilee=$_POST['editid'];
- $yes="yes";   
-$sqll="update fileup1 set pin=$yes where  id_file in ($idfilee)";
-
-}
-*/
-
-
-
-
-
-
-                  require_once('tbodyclick.php');
-
-                  ?>
-
-                </tbody>
-              </table>
+              <div class="content-recent-opened"> 
+                <?php require_once('tbodyclick.php'); ?> 
+              </div>
+ 
             </div>
 
 
