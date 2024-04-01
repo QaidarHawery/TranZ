@@ -17,7 +17,7 @@ function shortenFileName($filename, $maxLength = 12, $ellipsis = '...')
 // Show file
 function showFile($user)
 {
-
+  
   echo "<div  class='item' >";
   echo "<div>";
   echo "<a class='navbar-brand'  target='_self' href='uploaded\\$user[files_name]'>";
