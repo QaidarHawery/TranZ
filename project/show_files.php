@@ -2,7 +2,7 @@
 <?php
 
 // This function shorts the name of thi file if the length of the name is greater than 10 characters
-function shortenFileName($filename, $maxLength = 10, $ellipsis = '...')
+function shortenFileName($filename, $maxLength = 12, $ellipsis = '...')
 {
   $extension = pathinfo($filename, PATHINFO_EXTENSION);
   $filenameWithoutExtension = pathinfo($filename, PATHINFO_FILENAME);
