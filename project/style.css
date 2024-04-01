@@ -656,22 +656,20 @@ main .cati .line{
 .content-recent-opened {
     display: grid;
     gap: 1rem;
-    grid-template-areas: "item-1 item-2 item-3 item-4"
-    "item-5 item-6 item-7 item-8"
-    "item-9 item-10 item-11 item-12"
-    ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
 }
 
 
 .content-recent-opened >div {
         border: 10px solid #eee;
         position: relative;
-            border-radius: 26px;
-            padding: 0.8rem;
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            justify-content: space-between;
+        border-radius: 26px;
+        padding: 0.8rem;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
 }
 
 .content-recent-opened > div > div { 
@@ -688,11 +686,7 @@ main .cati .line{
 }
 .content-recent-opened>div>div:first-child .bx {
     font-size: 4.5rem;
-}
-.content-recent-opened {
-    
-}
- 
+} 
 /* For checkbox */
 .select-item {
     display: block;
@@ -1002,6 +996,23 @@ position: absolute;
 }
 
 /* END of Upload Buttun */
+@media screen and (max-width:1370px){
+.content-recent-opened { 
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media screen and (max-width:1120px) {
+    .content-recent-opened {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media screen and (max-width:860px) {
+    .content-recent-opened {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 @media screen and (max-width:1100px) {
     .container.upload.upload-item{
