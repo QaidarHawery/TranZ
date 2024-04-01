@@ -1,4 +1,4 @@
-<!-- display image file-->
+
 <?php
 
 // This function shorts the name of thi file if the length of the name is greater than 10 characters
@@ -47,6 +47,7 @@ function showFile($user)
   echo "</div>";
 }
 
+//prepare the connection to the database
 function connectToDatabase($getType, $conn, $id)
 {
   switch ($getType) {
@@ -75,7 +76,7 @@ function connectToDatabase($getType, $conn, $id)
   }
 }
 
-
+// display image file
 if (isset($_GET['image'])) {
   connectToDatabase('image', $conn, $id);
 }
@@ -98,7 +99,6 @@ elseif (isset($_GET['audio'])) {
 // display all files
 elseif (isset($_GET['all'])) {
   connectToDatabase('all', $conn, $id);
-
   //what is this?
   // if (!empty($_POST['editid']))
   //   foreach ($_POST['editid'] as $val) {
