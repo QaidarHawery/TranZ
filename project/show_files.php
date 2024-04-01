@@ -47,11 +47,12 @@ function showFile($user)
   echo "</div>";
 }
 
-function connectToDatabase($getType,$conn,$id){
-  switch($getType) {
+function connectToDatabase($getType, $conn, $id)
+{
+  switch ($getType) {
     case 'image':
       $sql7 = "select * from fileup1 where id_user=$id and files_type='image/jpeg' or  files_type='image/jpg' or  files_type='image/png' or  files_type='image/gif' ";
-    break;
+      break;
     case 'docs':
       $sql7 = "select * from fileup1 where id_user=$id and files_type!='audio/mp3' and  files_type!='audio/ogg' and files_type!='audio/x-m4a' and files_type!='video/mp4' and  files_type!='video/ogg' and files_type!='image/jpeg' and  files_type!='image/jpg' and  files_type!='image/png' and  files_type!='image/gif' ";
       break;
@@ -63,23 +64,20 @@ function connectToDatabase($getType,$conn,$id){
       break;
     case 'all':
       $sql7 = "select * from fileup1 where id_user=$id";
-    case '':
-      $sql7 = "select * from fileup1 where id_user=$id";
-    break;
+      break;
   }
 
   $anjam = mysqli_query($conn, $sql7);
   if (mysqli_num_rows($anjam) > 0) {
     while ($user = mysqli_fetch_assoc($anjam)) {
-      showFile($user); 
+      showFile($user);
     }
   }
-
 }
 
 
 if (isset($_GET['image'])) {
-  connectToDatabase('image',$conn,$id);
+  connectToDatabase('image', $conn, $id);
 }
 
 // display docs file-->
@@ -101,16 +99,16 @@ elseif (isset($_GET['audio'])) {
 elseif (isset($_GET['all'])) {
   connectToDatabase('all', $conn, $id);
 
-      //what is this?
-      // if (!empty($_POST['editid']))
-      //   foreach ($_POST['editid'] as $val) {
-      //     if ($val == $user['id_file']) {
-      //       echo "checked";
-      //     }
-      //   }
- 
+  //what is this?
+  // if (!empty($_POST['editid']))
+  //   foreach ($_POST['editid'] as $val) {
+  //     if ($val == $user['id_file']) {
+  //       echo "checked";
+  //     }
+  //   }
+
 } else {
-  connectToDatabase('', $conn, $id);
+  connectToDatabase('all', $conn, $id);
 }
 
 ?>
