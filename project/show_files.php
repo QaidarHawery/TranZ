@@ -17,7 +17,7 @@ function shortenFileName($filename, $maxLength = 12, $ellipsis = '...')
 // Show file
 function showFile($user)
 {
-  
+
   echo "<div  class='item' >";
   echo "<div>";
   echo "<a class='navbar-brand'  target='_self' href='uploaded\\$user[files_name]'>";
@@ -31,11 +31,12 @@ function showFile($user)
   } else {
     echo  "<i class='bx bx-file'></i>";
   }
+
   echo "</a>";
   echo "</div>";
   echo "<div>";
   echo "<p>" . shortenFileName($user['files_name']) . "</p>";
-  echo "<P>Size: " . number_format((float)($user['files_size'] / (1024 * 1024)), 2, '.', '.') . " MB</P>";
+  echo "<P>Size: ".number_format((float)($user['files_size'] / (1024 * 1024)), 2, '.', '.') . " MB</P>";
   echo "</div>";
   echo "<div>";
   echo "<label class='select-item'/> 
