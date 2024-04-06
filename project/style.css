@@ -750,7 +750,123 @@ main .cati .line{
 }
 
 /* End of checkobx */
- 
+
+#img-thumbnail{
+    width: 4rem;
+    height: 3rem;
+    overflow: hidden;
+    object-fit: cover; 
+    border-radius: 7px;
+}
+
+#img-thumbnail img{ 
+    max-width: 100%;
+    width: 100%; 
+    max-height: 100%;
+    object-fit: cover; 
+}
+
+/* Video Preview */
+.video-priview{
+    display: none; 
+    background-color: rgba(1, 1,1, 0.5);
+    position: fixed;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    place-content: center;
+    z-index: 9999;
+}
+
+.video-priview.show{ 
+    display: grid;
+}
+
+.video-priview video {
+    background-color: black; 
+    width: 100%;
+
+}
+
+.video-priview div{
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.video-priview .close-btn{
+    position: absolute;
+    top:-10px;
+    right: -10px;
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    line-height: 1.3;
+}
+/* End of video Preview */
+
+/* image Preview */
+.image-priview {
+    display: none;
+    background-color: rgba(1, 1, 1, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    place-content: center;
+    z-index: 9999;
+}
+
+.image-priview.show {
+    display: grid;
+}
+
+.image-priview div {
+    position: relative;
+    width: 80%;
+    max-width: fit-content;
+    height: 80vh;
+    margin: auto; 
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+}
+
+.image-priview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 10px;
+}
+
+
+.image-priview .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    line-height: 1.3;
+}
+
+/* End of image Preview */
+
 /*End of Section recent opened */
 
 /* Upload Buttun */

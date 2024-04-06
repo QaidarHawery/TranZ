@@ -1,17 +1,11 @@
 <?php
-require_once("page.php")
-if(isset($_POST['submit']))
-if(!empty($_FILES['file']))
-{
-    
-    
-    $targetDir = 'uploads/';
-    $filename = basename($_FILES['file']['name']);
-    $targetFilePath = $targetDir.$filename;
-    if(move_uploaded_file($_FILES['file']['tmp_name'], $targetFilePath)){
-        echo 'File Uploaded';
+require_once("page.php");
+if (isset($_POST['submit']))
+    if (!empty($_FILES['file'])) {
+        $targetDir = 'uploads/';
+        $filename = basename($_FILES['file']['name']);
+        $targetFilePath = $targetDir . $filename;
+        if (move_uploaded_file($_FILES['file']['tmp_name'], $targetFilePath)) {
+            echo 'File Uploaded';
+        }
     }
-
-
-}
-?>

@@ -300,16 +300,14 @@
                   <button class="file-selector">Browse Files</button>
                   <form action="" method="post" enctype="multipart/form-data">
                     <input type="file" class="file-selector-input" name="fileToUpload[]" multiple />
-                </div>
-                <div class="col">
-                  <div class="drop-here">Drop Here</div>
-                </div>
-              </div>
-              <div class="list-section">
-                <div class="list-title">Uploaded Files</div>
-
-
-                <input type="submit" value="Upload Image" name="submit">
+                    </div>
+                      <div class="col">
+                        <div class="drop-here">Drop Here</div>
+                      </div>
+                    </div>
+                  <div class="list-section">
+                    <div class="list-title">Uploaded Files</div>
+                    <input type="submit" value="Uploaded Files" name="submit">
 
                 </form>
                 <div class="list"></div>
