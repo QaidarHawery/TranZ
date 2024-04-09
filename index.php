@@ -2,18 +2,22 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/13547de2c6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+
   <link rel="stylesheet" href="style1.css" />
   <title>Sign in & Sign up Form</title>
+
 </head>
 
 <body>
   <?php
 
   require_once('database.php');
-
   if (isset($_POST['signup'])) {
     $name = $_POST['username'];
     $email = $_POST['email'];
@@ -41,8 +45,6 @@
       echo "<script>location.href='project/page.php'</script>  ";
     }
   }
-
-
 
   ?>
   <div class="container">

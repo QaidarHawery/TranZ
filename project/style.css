@@ -681,17 +681,32 @@ main .cati .line{
 }
 .content-recent-opened>div>div:last-child {
     position: absolute;
-    top: 0.4rem; 
-    right: 2.1rem;
+        top: 0;
+            right: 0px;
+            height: 100%; 
+            padding: 0.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: baseline;
 }
 .content-recent-opened>div>div:first-child .bx {
     font-size: 4.5rem;
 } 
+.content-recent-opened>div>div:last-child .bx {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.content-recent-opened>div>div:last-child .delete-icon:hover,
+.content-recent-opened>div>div:last-child .fav-icon:hover {
+    color: red;
+}
+
 /* For checkbox */
 .select-item {
     display: block;
     position: relative; 
-    margin-bottom: 12px;
+    margin-bottom: 22px;
     cursor: pointer;
     font-size: 22px;
     -webkit-user-select: none;
@@ -712,11 +727,12 @@ main .cati .line{
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     background-color: #eee;
-    outline: 1px solid #ccc;;
+        border: 2px solid #363949;
+        margin-left: 2px;
 }
  
 .select-item:hover input~.checkmark {
@@ -738,8 +754,8 @@ main .cati .line{
 }
  
 .select-item .checkmark:after {
-    left: 9px;
-    top: 5px;
+    left: 5px;
+    top: 0px;
     width: 5px;
     height: 10px;
     border: solid white;

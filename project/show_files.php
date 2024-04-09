@@ -72,7 +72,9 @@ function showFile($user, $fileType)
   echo "<label class='select-item'/> 
                 <input type='checkbox'>
                 <span class='checkmark'></span>
-              </label>";
+              </label>"; 
+  echo "<i class='bx bxs-trash delete-icon'></i>";
+  echo "<i class='bx bx-heart fav-icon'></i>";
   echo "</div>";
 
   // for preview of the file
